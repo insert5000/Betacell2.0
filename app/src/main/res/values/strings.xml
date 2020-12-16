@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Betacell</string>
+
+    <string name="Ed_User">Usuario</string>
+    <string name="Ed_pass">Contraseña</string>
+    <string name="btn_ini">Iniciar Sesion</string>
+    <string name="btn_regis">Registrarse</string>
+    <string name="text_icono">BetaCell</string>
+    <string name="tex_glucosa">¿Cuál es su última lectura de glucosa en sangre?</string>
+    <string name="text_glucosa2">Se realizo la medicion de glucosa cuando...</string>
+    <string name="tex_presion">¿Cuál es su registro de presion?(mmHg)</string>
+    <string name="text_presion2">Su pulsos por minutos son...</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="normal_map">NORMAL</string>
+    <string name="hybrid_map">HIBRIDO</string>
+    <string name="satellite_map">SATELITAL</string>
+    <string name="terrain_map">TERRENO</string>
+    <string name="title_activity_consejos_actividad">ConsejosActividad</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+
+    <string-array name="opciones">
+        <item>Seleccione</item>
+        <item>Ruby</item>
+        <item>Java</item>
+        <item>.NET</item>
+        <item>Python</item>
+        <item>PHP</item>
+        <item>JavaScript</item>
+        <item>GO</item>
+    </string-array>
+</resources>

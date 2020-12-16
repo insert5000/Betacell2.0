@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Glucosa"
+    android:orientation="vertical"
+    android:background="#FF1F596D"
+    >
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.betacell.Fragments.MenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="241dp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tex_glucosa"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/mol"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:inputType="numberDecimal"
+        android:textColorHint="#ffffff"
+        android:hint="2-30                           mmol/L"
+        android:textColor="#ffffff"
+        android:background="#C92C7893"/>
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/text_glucosa2"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+    <Spinner
+        android:id="@+id/sppiner"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:id="@+id/guardar_glucosa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_forma"
+        android:elevation="5dp"
+        android:text="GUARDAR"
+        android:fontFamily="sans-serif"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        />
+</LinearLayout>

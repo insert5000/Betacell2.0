@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Alarma"
+    android:background="#FF1F596D">
+
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:text="REGISTRO DE CITA"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/tv_fecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/tv_fecha"
+        android:layout_width="164dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="32dp"
+        android:hint="10-12-2020"
+        android:text="Fecha"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/btn_selefecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_selefecha"
+        android:layout_width="154dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="32dp"
+        android:text="REGISTRA FECHA"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/btn_forma"
+        android:elevation="5dp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tv_hora"
+        android:layout_width="159dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="24dp"
+        android:text="Hora"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/btn_selehora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_selehora"
+        android:layout_width="156dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="24dp"
+        android:text="REGISTRA HORA"
+        app:layout_constraintBottom_toTopOf="@+id/btn_guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/btn_forma"
+        android:elevation="5dp"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="GUARDAR"
+        app:layout_constraintBottom_toTopOf="@+id/btn_eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/btn_forma"
+        android:elevation="5dp"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/btn_eliminar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="124dp"
+        android:text="ELIMINAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/btn_forma"
+        android:elevation="5dp"
+        android:textColor="#ffffff"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
