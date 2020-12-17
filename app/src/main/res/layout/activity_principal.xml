@@ -6,13 +6,13 @@
     tools:context=".Fragments.MenuFragment"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     android:id="@+id/menuFra"
-    android:background="#FF1F596D">
+    android:background="#fffffff">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="176dp"
         android:id="@+id/img_icono"
-        android:src="@drawable/icon"/>
+        android:src="@drawable/magen_icon"/>
     <TextView
         android:id="@+id/textIcono"
         android:layout_width="match_parent"
@@ -22,10 +22,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="169dp"
         android:textAlignment="center"
-        android:textColor="#FF3737"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:textColor="#E63764"
+        android:textSize="50dp"
+        android:gravity="center_horizontal"
+        android:textStyle="italic|bold"
+        android:fontFamily="sans-serif"/>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -35,7 +36,7 @@
         android:columnCount="2"
         android:rowCount="3"
         android:layout_below="@+id/img_icono"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="50dp"
 
         >
 
@@ -59,21 +60,24 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:orientation="vertical"
 
+
                 >
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/presion"/>
+                    android:src="@drawable/presion" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:text="Presion"
                     android:textAlignment="center"
-                    android:textColor="#2B2727"
-                    android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textColor="#E63764"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
 
 
             </LinearLayout>
@@ -109,9 +113,10 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Glucosa"
                     android:textAlignment="center"
-                    android:textColor="#2B2727"
-                    android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textColor="#E63764"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
 
 
             </LinearLayout>
@@ -147,9 +152,10 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Farmacias Cercanas"
                     android:textAlignment="center"
-                    android:textColor="#2B2727"
-                    android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textColor="#E63764"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
 
 
             </LinearLayout>
@@ -185,9 +191,10 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Bitacora"
                     android:textAlignment="center"
-                    android:textColor="#2B2727"
-                    android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textColor="#E63764"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
 
 
             </LinearLayout>
@@ -223,9 +230,10 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Alarma"
                     android:textAlignment="center"
-                    android:textColor="#2B2727"
-                    android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textColor="#E63764"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
 
 
             </LinearLayout>
@@ -261,9 +269,10 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Consejos"
                     android:textAlignment="center"
-                    android:textColor="#2B2727"
-                    android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    android:textColor="#E63764"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
 
 
             </LinearLayout>

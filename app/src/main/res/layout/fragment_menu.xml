@@ -9,10 +9,11 @@
     android:id="@+id/menuFra">
 
     <ImageView
+        android:id="@+id/img_icono"
         android:layout_width="match_parent"
         android:layout_height="176dp"
-        android:id="@+id/img_icono"
-        android:src="@drawable/icon"/>
+        android:src="@drawable/magen_icon" />
+
     <TextView
         android:id="@+id/textIcono"
         android:layout_width="match_parent"
@@ -22,10 +23,12 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="169dp"
         android:textAlignment="center"
-        android:textColor="#FF3737"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:textColor="#E63764"
+        android:textSize="50dp"
+        android:gravity="center_horizontal"
+        android:textStyle="italic|bold"
+        android:fontFamily="sans-serif"/>
+
     
 
 

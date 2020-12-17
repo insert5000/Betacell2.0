@@ -35,4 +35,21 @@
         <item>JavaScript</item>
         <item>GO</item>
     </string-array>
+
+
+    <string name="ejercicios">
+        <h1>Ejercicio aeróbico para diabéticos</h1><br/>
+        Se realiza a baja o moderada intensidad y es de larga duración. Es el que utiliza grandes grupos musculares, como las piernas y brazos, sin la utilización de peso y de una manera rítmica. Es el ejercicio mejor conocido como cardiovascular, ya que nuestro corazón y pulmones pueden suplir a nuestros músculos de todo los nutrientes y oxígeno necesario para poder realizar esa actividad.
+Como ejercicios aeróbicos más recomendados para personas diabéticas tenemos:<br/>
+
+* Marcha a paso ligero.<br/>
+* Ciclismo.<br/>
+* Elíptica.<br/>
+* Natación.<br/>
+* Patinaje.<br/>
+* Baile.<br/>
+* Senderismo.<br/>
+* Correr.<br/>
+
+    </string>
 </resources>

@@ -5,26 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Splash.Splash"
-    android:background="#FF1F596D">
+    android:background="#ffffff">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="237dp"
-        android:layout_height="279dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269"
-        app:srcCompat="@drawable/icon"
-        tools:ignore="MissingConstraints"
-        android:background="@drawable/icon"/>
+        app:layout_constraintVertical_bias="0.313"
+        app:srcCompat="@drawable/magen_icon"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BETACELL"
-        android:textColor="#FF2F2F"
+        android:textColor="#E63764"
         android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,8 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints"
-        android:textStyle="italic|bold"/>
+        android:textStyle="italic|bold"
+        android:fontFamily="sans-serif"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
