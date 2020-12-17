@@ -6,24 +6,25 @@
     tools:context=".Fragments.MenuFragment"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     android:id="@+id/menuFra"
-    android:background="#fffffff">
+    android:background="#ffffff">
 
     <ImageView
+
         android:layout_width="match_parent"
-        android:layout_height="176dp"
+        android:layout_height="150dp"
         android:id="@+id/img_icono"
-        android:src="@drawable/magen_icon"/>
+        android:src="@drawable/magen_icon"
+        android:layout_marginTop="25dp"/>
     <TextView
         android:id="@+id/textIcono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/text_icono"
         android:layout_alignTop="@+id/img_icono"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="169dp"
+        android:layout_marginTop="149dp"
         android:textAlignment="center"
         android:textColor="#E63764"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:gravity="center_horizontal"
         android:textStyle="italic|bold"
         android:fontFamily="sans-serif"/>
@@ -75,7 +76,7 @@
                     android:text="Presion"
                     android:textAlignment="center"
                     android:textColor="#E63764"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
 
@@ -114,7 +115,7 @@
                     android:text="Glucosa"
                     android:textAlignment="center"
                     android:textColor="#E63764"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
 
@@ -153,7 +154,7 @@
                     android:text="Farmacias Cercanas"
                     android:textAlignment="center"
                     android:textColor="#E63764"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
 
@@ -192,7 +193,7 @@
                     android:text="Bitacora"
                     android:textAlignment="center"
                     android:textColor="#E63764"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
 
@@ -231,7 +232,7 @@
                     android:text="Alarma"
                     android:textAlignment="center"
                     android:textColor="#E63764"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
 
@@ -241,7 +242,7 @@
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/cosejos"
+            android:id="@+id/consejos"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="16dp"
@@ -270,7 +271,7 @@
                     android:text="Consejos"
                     android:textAlignment="center"
                     android:textColor="#E63764"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
 

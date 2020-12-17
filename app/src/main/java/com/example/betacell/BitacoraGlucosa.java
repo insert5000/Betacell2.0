@@ -1,6 +1,7 @@
 package com.example.betacell;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,7 +17,7 @@ import com.example.betacell.BaseDatos.Presion;
 
 import java.util.ArrayList;
 
-public class BitacoraGlucosa extends AppCompatActivity {
+public class BitacoraGlucosa extends FragmentActivity {
 
 
     ArrayList<GlucosaDB> listaGlucosa;

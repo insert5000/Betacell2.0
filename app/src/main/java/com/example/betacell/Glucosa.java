@@ -18,6 +18,10 @@ import android.widget.Toast;
 
 import com.example.betacell.BaseDatos.DatabaseHelper;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Glucosa extends FragmentActivity {
     private Spinner sppiner;
     Button guardar;
@@ -35,6 +39,7 @@ public class Glucosa extends FragmentActivity {
         r_glucosa=(EditText)findViewById(R.id.mol);
         sppiner = (Spinner)findViewById(R.id.sppiner);
         guardar=(Button)findViewById(R.id.guardar_glucosa);
+
 
 
         String[] opciones = {"Al menos 90 minutos después de la comida", "Ayuno", "Antes de las comidas"};
@@ -55,14 +60,15 @@ public class Glucosa extends FragmentActivity {
 
     private void registrarGlucosa() {
         DatabaseHelper conn=new DatabaseHelper(this,"betacellDB",null,1);
-
+        Date d = new Date();
+        String fDate = new SimpleDateFormat("yyyy-MM-dd").format(d);
         SQLiteDatabase db=conn.getWritableDatabase();
 
         ContentValues values=new ContentValues();
         values.put(DatabaseHelper.MEDICION_GLUCOSA,r_glucosa.getText().toString());
         values.put(DatabaseHelper.CONDICION,sppiner.getSelectedItem().toString());
         values.put(DatabaseHelper.USUARIO_GLUCOSA,"DERIAN");
-        values.put(DatabaseHelper.FECHA_GLUCOSA,"12/12/12");
+        values.put(DatabaseHelper.FECHA_GLUCOSA, fDate);
 
 
         Long idResultante=db.insert(DatabaseHelper.TABLE_GLUCOSA,DatabaseHelper.ID_GLUCOSA,values);

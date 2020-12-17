@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_margin="5dp"
-        android:id="@+id/car_ejercicio"
+        android:id="@+id/car_alimentacion"
 
         >
 
@@ -68,6 +68,7 @@
                 />
 
             <Button
+                android:id="@+id/btn_alimentacion"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@+id/title_presion"
@@ -95,7 +96,7 @@
         android:padding="5dp"
         android:layout_margin="5dp"
         android:id="@+id/car_hidratacion"
-        android:layout_below="@+id/car_ejercicio"
+        android:layout_below="@+id/car_hidratacion"
 
         >
 
@@ -145,6 +146,7 @@
                 />
 
             <Button
+                android:id="@+id/btn_hidratacion"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@+id/t3"
@@ -172,7 +174,7 @@
         android:padding="5dp"
         android:layout_margin="5dp"
         android:id="@+id/car_pies"
-        android:layout_below="@+id/car_hidratacion"
+        android:layout_below="@+id/car_pies"
 
         >
 
@@ -222,6 +224,7 @@
                 />
 
             <Button
+                android:id="@+id/btn_pies"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@+id/t4"
@@ -249,7 +252,7 @@
         android:padding="5dp"
         android:layout_margin="5dp"
         android:id="@+id/card_riegos"
-        android:layout_below="@+id/car_pies"
+        android:layout_below="@+id/car_riesgo"
 
         >
 
@@ -299,6 +302,7 @@
                 />
 
             <Button
+                android:id="@+id/btn_riesgos"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@+id/t5"
@@ -326,7 +330,7 @@
         android:padding="5dp"
         android:layout_margin="5dp"
         android:id="@+id/card_ejercicios"
-        android:layout_below="@+id/card_riegos"
+        android:layout_below="@+id/car_ejercicio"
 
         >
 
@@ -376,6 +380,7 @@
                 />
 
             <Button
+                android:id="@+id/btn_ejercicios"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@+id/t2"

@@ -19,6 +19,9 @@ import com.example.betacell.BaseDatos.DatabaseHelper;
 import com.example.betacell.BaseDatos.Presion;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Press extends FragmentActivity {
 
     EditText registro,pulsos;
@@ -73,14 +76,15 @@ public class Press extends FragmentActivity {
 
     private void registrarPresion() {
         DatabaseHelper conn=new DatabaseHelper(this,"betacellDB",null,1);
-
+        Date d = new Date();
+        String fDate = new SimpleDateFormat("yyyy-MM-dd").format(d);
         SQLiteDatabase db=conn.getWritableDatabase();
 
         ContentValues values=new ContentValues();
         values.put(DatabaseHelper.REGISTRO,registro.getText().toString());
         values.put(DatabaseHelper.PULSOS,pulsos.getText().toString());
         values.put(DatabaseHelper.USUARIO,"DERIAN");
-        values.put(DatabaseHelper.FECHA,"12/12/12");
+        values.put(DatabaseHelper.FECHA,fDate);
 
 
         Long idResultante=db.insert(DatabaseHelper.TABLE_PRESION,DatabaseHelper.ID,values);

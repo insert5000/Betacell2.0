@@ -38,18 +38,127 @@
 
 
     <string name="ejercicios">
-        <h1>Ejercicio aeróbico para diabéticos</h1><br/>
+        <h1>Ejercicio aeróbico para diabéticos</h1><br />
         Se realiza a baja o moderada intensidad y es de larga duración. Es el que utiliza grandes grupos musculares, como las piernas y brazos, sin la utilización de peso y de una manera rítmica. Es el ejercicio mejor conocido como cardiovascular, ya que nuestro corazón y pulmones pueden suplir a nuestros músculos de todo los nutrientes y oxígeno necesario para poder realizar esa actividad.
-Como ejercicios aeróbicos más recomendados para personas diabéticas tenemos:<br/>
+        Como ejercicios aeróbicos más recomendados para personas diabéticas tenemos:<br />
 
-* Marcha a paso ligero.<br/>
-* Ciclismo.<br/>
-* Elíptica.<br/>
-* Natación.<br/>
-* Patinaje.<br/>
-* Baile.<br/>
-* Senderismo.<br/>
-* Correr.<br/>
+        * Marcha a paso ligero.<br />
+        * Ciclismo.<br />
+        * Elíptica.<br />
+        * Natación.<br />
+        * Patinaje.<br />
+        * Baile.<br />
+        * Senderismo.<br />
+        * Correr.<br /><br />
+        <h1>El ejercicio de resistencia para la diabetes</h1><br />
+        Utiliza la fuerza muscular de determinados músculos para mover
+        un contra peso. Este ejercicio suele requerir mayor cantidad
+        de nutrientes y oxígeno para que los músculos puedan realizarlo
+        que lo que nuestro corazón y pulmones pueden aportar.
+        Por esta razón es un ejercicio anaeróbico y produce las típicas
+        agujetas. Siempre y cuando no exista ninguna contraindicación médica,
+        se deberá realizar con cierto peso que sea viable para fortalecer el músculo.<br />
+
+        Se recomienda iniciar con un peso de 2-3 kg e ir subiendo el peso utilizado
+        según la tolerancia. Para cada grupo muscular se recomienda un periodo de recuperación de
+        mínimo 48 horas. Los ejercicios de resistencia que más se recomiendan son:<br />
+
+        Abdominales.<br />
+        * Espalda (dorsales).<br />
+        * Brazos (pectorales, deltoides, trapecios, bíceps y tríceps).<br />
+        * Piernas (glúteos, cuádriceps, bíceps femoral y gemelos).<br />
+
+        <h1>El ejercicio flexibilizante para personas con diabetes</h1><br />
+        Se concentra en el estiramiento muscular y el recorrido de cada articulación. Las personas diabéticas son más propensas al desgaste articular, roturas musculares y lesiones tendinosas, ya que el exceso de azúcar en el cuerpo degenera las células de una manera más precoz. Por esta razón, antes y después del ejercicio físico es de suma importancia la realización de ejercicios flexibilizantes.
+        Se recomienda como ejercicio flexibilizante la realización de un programa de estiramientos que incluya el cuerpo en su totalidad: la columna, las piernas y los brazos. Además, otras actividades con un toque lúdico que se concentran en el estiramiento corporal son el yoga, el Pilates, la gimnasia o el ballet.
 
     </string>
+    <string name="alimentacion">
+        Una dieta contra la diabetes implica comer los alimentos más saludables en cantidades moderadas y cumplir los horarios de comida habituales.
+        Una dieta contra la diabetes es un plan de alimentación saludable con alto contenido de nutrientes por naturaleza y bajo contenido de grasa y calorías. Los elementos clave son las frutas, los vegetales y los granos integrales. De hecho, una dieta contra la diabetes es el mejor plan de alimentación para casi todas las personas.<br />
+        <h3>¿Por qué necesitas crear un plan de alimentación saludable?</h3><br />
+        Si tienes diabetes o prediabetes, tu médico probablemente te recomendará que consultes a un dietista para que te ayude a crear un plan de alimentación saludable. El plan te ayuda a controlar tu nivel de azúcar (glucosa) en la sangre, controlar el peso y controlar los factores de riesgo de enfermedades cardíacas, como la presión arterial alta y las grasas en la sangre.
+        Cuando consumes un exceso de calorías y grasas, tu cuerpo genera un aumento no deseado de glucosa en sangre. Si no mantienes bajo control la glucosa en sangre, puede provocar problemas graves, como niveles elevados de glucosa en sangre (hiperglucemia) que, si persisten, pueden causar complicaciones a largo plazo, como daños a los nervios, los riñones y el corazón.
+        Puedes mantener niveles seguros de glucosa en sangre si eliges alimentos saludables y haces un seguimiento de tus hábitos alimenticios.
+        Para la mayoría de las personas con diabetes tipo 2, la pérdida de peso también puede facilitar el control de la glucosa en sangre y ofrece una serie de otros beneficios para la salud. Si necesitas perder peso, una dieta para la diabetes proporciona una forma bien organizada y nutritiva de alcanzar tu objetivo de forma segura.<br />
+        <h3>¿Qué implica una dieta para la diabetes?</h3><br />
+        Una dieta para la diabetes se basa en comer tres comidas al día a horas regulares. Esto te ayuda a utilizar mejor la insulina que tu cuerpo produce o recibe a través de un medicamento.
+        Un dietista certificado puede ayudarte a preparar una dieta basada en tus objetivos de salud, gustos y estilo de vida. También puede hablar contigo sobre las maneras de mejorar tus hábitos alimenticios, tales como elegir porciones que se adapten a las necesidades de tu tamaño y nivel de actividad.<br />
+        <h2>Alimentos recomendados</h2><br />
+        Durante la digestión, los azúcares (carbohidratos simples) y los almidones (carbohidratos complejos) se descomponen en glucosa en la sangre. Concéntrate en los carbohidratos saludables, como:<br />
+        <h4>Carbohidratos saludables</h4><br />
+        Durante la digestión, los azúcares (carbohidratos simples) y los almidones (carbohidratos complejos) se descomponen en glucosa en la sangre. Concéntrate en los carbohidratos saludables, com:<br />
+        * Frutas<br />
+        * Vegetales<br />
+        * Cereales integrales<br />
+        * Legumbres, como frijoles y guisantes<br />
+        * Productos lácteos bajos en grasa, como leche y queso<br />
+        * Evita los carbohidratos menos saludables, como los alimentos o bebidas con grasas, azúcares y sodio agregados.<br />
+
+        <h4>Alimentos ricos en fibra</h4><br />
+        La fibra alimenticia incluye todas las partes de los alimentos vegetales que tu cuerpo no puede digerir o absorber. La fibra modera la forma en que tu cuerpo digiere y ayuda a controlar los niveles de azúcar en la sangre. Los alimentos ricos en fibra incluyen:<br />
+        * Vegetales<br />
+        <img src="@drawable/alarma.png"></img>
+        * Frutas<br />
+        * Nueces<br />
+        * Legumbres, como frijoles y guisantes<br />
+        * Cereales integrales<br /><br />
+        <h4>Alimentos ricos en fibra</h4><br />
+        La fibra alimenticia incluye todas las partes de los alimentos vegetales que tu cuerpo no puede digerir o absorber. La fibra modera la forma en que tu cuerpo digiere y ayuda a controlar los niveles de azúcar en la sangre. Los alimentos ricos en fibra incluyen:<br />
+        * Vegetales<br />
+        * Frutas<br />
+        * Nueces<br />
+        * Legumbres, como frijoles y guisantes<br />
+        * Cereales integrales<br />
+
+
+
+
+    </string>
+    <string name="hidratacion">
+      Las personas con diabetes tienen un mayor riesgo de deshidratación, ya que tener un nivel elevado de glucosa en sangre, conduce a una disminución en la hidratación del cuerpo. Si los niveles de glucosa en sangre son más altos de lo que deberían durante períodos prolongados de tiempo, los riñones intentarán eliminar parte del exceso de glucosa expulsándola en forma de orina.
+        Mientras que los riñones filtran la sangre de esta manera, se pierde mucha agua junto con la glucosa y es fundamental reponerla. Es por eso que los diabéticos tienden a tener más sed cuando sus niveles de glucosa en sangre están demasiado altos. Por tanto, el consumo de agua, puede ayudar a rehidratar la sangre.<br/>
+        <br><h3> Síntomas de la deshidratación:</h3></br>
+        * Sed<br/>
+        * Dolor de cabeza<br/>
+        * Sequedad de boca y ojos secos<br/>
+        * Boca reseca o pegajosa<br/>
+        * Mareos o dolores de cabeza<br/>
+        * Cansancio<br/>
+        * Problemas de concentración<br/>
+        * Baja diuresis<br/>
+        * Orina de color amarillo oscuro<br/>
+
+        Como tratar la deshidratación<br/>
+
+        La deshidratación se puede tratar mediante el consumo líquidos, siendo el agua el mas idóneo, ya que no tiene azúcar adicional. Es importante tener en cuenta que si la deshidratación se acompaña de hiperglucemia (niveles de azúcar en la sangre alto), beber líquidos azucarados como jugos de frutas o bebidas gaseosas azucaradas podría empeorar el problema.
+
+
+    </string>
+    <string name="pies">
+        Jamás camine descalzo. El daño de los nervios disminuye la sensación, así puede ocurrir que usted no sienta piedritas u objetos pequeños atrapados en su pie. Esto puede llevar a una infección masiva. Usar siempre zapatos o pantuflas reduce este riesgo.<br/>
+        Lave sus pies todos los días con un jabón suave y agua tibia. Primero pruebe la temperatura del agua con su mano. No ponga sus pies en remojo. Cuando los seca, dé golpecitos suaves en cada pie con una toalla en vez frotarlos vigorosamente. Sea cuidadoso con el secado entre los dedos de sus pies.<br/>
+        Use loción para mantener la piel de sus pies suave y humedecida. Esto previene las grietas que se hacen por piel seca y reduce el riesgo de infección. No se ponga loción entre los dedos.<br/>
+        Corte las uñas del pie sin darles forma curva. Evite cortar las esquinas. Use una lima o un cartón de esmeril para uñas. Si detecta una uña encarnada, vea a su médico. La buena atención médica es importante en la prevención de infecciones.<br/>
+        No use soluciones antisépticas, medicamentos de venta libre, almohadillas de calor ni instrumentos afilados en sus pies. No ponga sus pies sobre los radiadores ni frente a la estufa.<br/>
+        No deje que sus pies se enfríen. Use calcetines flojos en la cama. No se moje los pies en la nieve ni en la lluvia. Use calcetines y zapatos abrigados en invierno.<br/>
+        NO fume. Fumar daña los vasos sanguíneos y reduce la capacidad del cuerpo de transportar oxígeno. En combinación con la diabetes, ello aumenta significativamente su riesgo de una amputación (no solo de los pies, sino que también puede incluir las manos).<br/>
+            </string>
+    <string name="riesgos">
+        <h2>Complicaciones de la diabetes a largo plazo</h2><br/>
+La diabetes eleva su azúcar en la sangre a un nivel más alto de lo normal. Después de muchos años, mucha azúcar en la sangre puede causar problemas en su cuerpo. Puede dañar sus ojos, riñones, nervios, piel, corazón y vasos sanguíneos.
+
+Usted podría tener problemas visuales. También podría tener problemas para ver, particularmente de noche. La luz podría molestarle los ojos. Podría quedar ciego.
+Sus pies y piel pueden desarrollar úlceras. Si esto sigue por mucho tiempo, sus dedos, pie o pierna pueden necesitar ser amputados. La infección también puede causar dolor, comezón o exudación en sus pies, piernas y otras áreas.
+La diabetes puede dificultar el control de su presión arterial y colesterol. Esto puede llevar a un ataque cardíaco, accidente cerebrovascular y otros problemas. Puede hacerse más difícil que la sangre circule hacia las piernas y los pies.
+Los nervios en el cuerpo pueden resultar dañados, causando dolor, ardor, hormigueo y pérdida de la sensibilidad. El daño a los nervios también puede hacer que para los hombres sea más difícil tener una erección.
+Usted podría tener problemas para digerir el alimento que consume. Podría sentir debilidad o tener problemas para tener una deposición.
+El nivel alto de azúcar en la sangre y otros problemas pueden llevar a daño en los riñones. Sus riñones podrían no trabajar tan bien y pueden incluso detener su funcionamiento. En consecuencia, usted podría necesitar diálisis o un trasplante de riñón.
+Las personas con diabetes frecuentemente tienen depresión y las dos enfermedades pueden estar relacionadas.
+Algunas mujeres con diabetes pueden tener periodos irregulares y pueden tener problemas para quedar embarazadas.
+La diabetes aumenta el riesgo de demencia.
+La diabetes aumenta el riesgo de enfermedades óseas, incluyendo la osteoporosis.
+El nivel bajo de azúcar en la sangre (hipoglicemia) debido al tratamiento de la diabetes también puede incrementar el riesgo de enfermedad cardíaca.
+    </string>
+
 </resources>

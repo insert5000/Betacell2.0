@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.example.betacell.R;
 
 public class Alimentacion extends FragmentActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

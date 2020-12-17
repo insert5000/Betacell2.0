@@ -21,7 +21,7 @@ public class Principal extends FragmentActivity implements View.OnClickListener{
         cardGps = (CardView)findViewById(R.id.gps);
         cardAlarma = (CardView)findViewById(R.id.alarma);
         cardBitacora = (CardView)findViewById(R.id.bitacora);
-        cardConsejos = (CardView)findViewById(R.id.cosejos);
+        cardConsejos = (CardView)findViewById(R.id.consejos);
 
 
         cardPresion.setOnClickListener( this);
@@ -59,7 +59,7 @@ public class Principal extends FragmentActivity implements View.OnClickListener{
                 i = new Intent(this, Alarma.class);
                 startActivity(i);
                 break;
-            case R.id.cosejos:
+            case R.id.consejos:
                 i = new Intent(this, Consejos.class);
                 startActivity(i);
                 break;

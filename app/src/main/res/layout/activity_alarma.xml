@@ -9,35 +9,39 @@
 
 
     <TextView
-        android:id="@+id/tv_titulo"
+        android:id="@+id/a_titulo"
         android:layout_width="match_parent"
         android:layout_height="81dp"
         android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="REGISTRO DE CITA"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
-android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_fecha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="#FFFFFF"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_fecha"
         android:layout_width="164dp"
         android:layout_height="36dp"
         android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif"
         android:hint="10-12-2020"
         android:text="Fecha"
-        android:fontFamily="sans-serif"
-        android:textSize="18sp"
         android:textColor="#ffffff"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_selefecha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989" />
 
     <Button
         android:id="@+id/btn_selefecha"
@@ -85,30 +89,30 @@ android:layout_marginTop="50dp"
         android:id="@+id/btn_guardar"
         android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:layout_marginBottom="20dp"
         android:layout_marginHorizontal="20dp"
-        android:text="GUARDAR"
-        app:layout_constraintBottom_toTopOf="@+id/btn_eliminar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/btn_forma"
         android:elevation="5dp"
-        android:textColor="#ffffff"/>
+        android:text="GUARDAR"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/btn_eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_eliminar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="124dp"
-        android:text="ELIMINAR"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="116dp"
         android:background="@drawable/btn_forma"
         android:elevation="5dp"
-        android:textColor="#ffffff"/>
+        android:text="ELIMINAR"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

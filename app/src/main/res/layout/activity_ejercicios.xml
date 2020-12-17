@@ -34,16 +34,16 @@
                 android:layout_height="250dp"
                 android:src="@drawable/ejercicio"
                 android:layout_marginTop="10dp"
-
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/ejercicios"
                 android:textColor="#ffffff"
                 android:fontFamily="sans-serif"
+                android:background="#AB304F"
+                android:padding="25dp"
 
                 />
         </LinearLayout>

@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConsejosAtv.Ejercicios"></activity>
+        <activity android:name=".ConsejosAtv.Alimentos"></activity>
+        <activity android:name=".ConsejosAtv.Ejercicios" />
         <activity android:name=".ConsejosAtv.Riesgo" />
         <activity android:name=".ConsejosAtv.Pies" />
         <activity android:name=".ConsejosAtv.Hidratacion" />
