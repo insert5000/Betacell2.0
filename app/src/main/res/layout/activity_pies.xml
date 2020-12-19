@@ -15,10 +15,16 @@
             android:background="#1F596D"
             android:orientation="vertical"
             >
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000f29"
+            android:padding="20dp"
+            >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginHorizontal="50dp"
                 android:fontFamily="sans-serif"
                 android:textSize="40sp"
                 android:textColor="#ffffff"
@@ -26,16 +32,25 @@
                 android:text="CUIDADO DE PIES"
                 android:textAlignment="center"
                 android:gravity="center_horizontal"
-                android:padding="20dp"
-                android:background="#AB304F"
                 />
+        </LinearLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:src="@drawable/pies"
-                android:layout_marginTop="10dp"
-                android:paddingHorizontal="30dp"
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/pies"
+            android:layout_marginTop="10dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/btn_aceptar"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_aceptar"
+            android:padding="10dp"
+            android:layout_margin="15dp">
 
                 />
             <TextView
@@ -43,12 +58,13 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
                 android:text="@string/pies"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:fontFamily="sans-serif"
-                android:background="#AB304F"
+
                 android:padding="25dp"
 
                 />
+        </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

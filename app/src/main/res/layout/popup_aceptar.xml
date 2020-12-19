@@ -38,7 +38,7 @@
                     android:textStyle="bold"
                     android:textSize="25dp"
                     android:text="REGISTRO CORRECTO"
-                    android:textColor="#ffffff"
+                    android:textColor="#1F596D"
                     android:gravity="center_horizontal"
                     android:fontFamily="sans-serif"
                     android:layout_marginHorizontal="60dp"

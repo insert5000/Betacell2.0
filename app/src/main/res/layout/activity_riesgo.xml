@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConsejosAtv.Riesgo">
+    tools:context=".ConsejosAtv.Ejercicios"
+    android:background="#1F596D">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,41 +16,57 @@
             android:background="#1F596D"
             android:orientation="vertical"
             >
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif"
-                android:textSize="40sp"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:text="RIESGOS"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:background="#000f29"
                 android:padding="20dp"
-                android:background="#AB304F"
-                />
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="50dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="40sp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:text="RIESGOS"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    />
+            </LinearLayout>
+
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:src="@drawable/riesgo"
                 android:layout_marginTop="10dp"
-                android:paddingHorizontal="30dp"
-
+                android:layout_margin="15dp"
+                android:background="@drawable/btn_aceptar"
                 />
-            <TextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:text="@string/riesgos"
-                android:textColor="#ffffff"
-                android:fontFamily="sans-serif"
-                android:background="#AB304F"
-                android:padding="25dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_aceptar"
+                android:padding="10dp"
+                android:layout_margin="15dp">
 
-                />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/riesgos"
+                    android:textColor="#000000"
+                    android:fontFamily="sans-serif"
+                    android:padding="25dp"
+
+                    />
+
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
