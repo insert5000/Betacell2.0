@@ -10,22 +10,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-        //DATABASE NAME
+        //DB NAME
         public static final String DATABASE_NAME = "betacellDB";
-        //DATABASE VERSION
+        //DB VERSION
         public static final int DATABASE_VERSION = 1;
-        //TABLE NAME
         public static final String TABLE_USERS = "users";
-        //TABLE USERS COLUMNS
-        //ID COLUMN @primaryKey
+        //TABLA USUARIO COLUMNS
         public static final String KEY_ID = "id";
-        //COLUMN user name
         public static final String KEY_USER_NAME = "username";
-        //COLUMN email
         public static final String KEY_EMAIL = "email";
-        //COLUMN password
         public static final String KEY_PASSWORD = "password";
-        //SQL for creating users table
         public static final String SQL_TABLE_USERS = " CREATE TABLE " + TABLE_USERS
                 + " ( "
                 + KEY_ID + " INTEGER PRIMARY KEY, "
@@ -37,17 +31,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         public static final String TABLE_PRESION = "presion";
-        //TABLE USERS COLUMNS
-        //ID COLUMN @primaryKey
+        //TABLE PRESS COLUMNS
         public static final String ID = "id";
-        //COLUMN user name
         public static final String REGISTRO = "registro";
-        //COLUMN email
         public static final String PULSOS = "pulsos";
-        //COLUMN password
         public static final String FECHA = "fecha";
         public static final String USUARIO = "usuario";
-        //SQL for creating users table
         public static final String SQL_TABLE_PRESION = " CREATE TABLE " + TABLE_PRESION
                 + " ( "
                 + ID + " INTEGER PRIMARY KEY, "
@@ -59,20 +48,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + " ) ";
 
 
-    public static final String TABLE_GLUCOSA = "glucosa";
-    //TABLE USERS COLUMNS
-    //ID COLUMN @primaryKey
-    public static final String ID_GLUCOSA = "id";
-    //COLUMN user name
-    public static final String MEDICION_GLUCOSA = "medicionGlucosa";
-    //COLUMN email
-    public static final String CONDICION = "condicion";
-    //COLUMN password
-    public static final String FECHA_GLUCOSA= "fecha";
-    public static final String USUARIO_GLUCOSA = "usuario";
+        public static final String TABLE_GLUCOSA = "glucosa";
+        //TABLE GLUCOSA COLUMNS
+        public static final String ID_GLUCOSA = "id";
+        public static final String MEDICION_GLUCOSA = "medicionGlucosa";
+        public static final String CONDICION = "condicion";
+        public static final String FECHA_GLUCOSA= "fecha";
+        public static final String USUARIO_GLUCOSA = "usuario";
 
-    //SQL for creating users table
-    public static final String SQL_TABLE_GLUCOSA = " CREATE TABLE " + TABLE_GLUCOSA
+        public static final String SQL_TABLE_GLUCOSA = " CREATE TABLE " + TABLE_GLUCOSA
             + " ( "
             + ID_GLUCOSA + " INTEGER PRIMARY KEY, "
             + MEDICION_GLUCOSA + " TEXT, "
@@ -83,17 +67,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + " ) ";
 
 
-    public DatabaseHelper(Context context) {
-            super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        }
+            public DatabaseHelper(Context context) {
+                    super(context, DATABASE_NAME, null, DATABASE_VERSION);
+                }
 
-    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
-    }
+            public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+                super(context, name, factory, version);
+            }
 
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
-            //Create Table when oncreate gets called
             sqLiteDatabase.execSQL(SQL_TABLE_USERS);
             sqLiteDatabase.execSQL(SQL_TABLE_PRESION);
             sqLiteDatabase.execSQL(SQL_TABLE_GLUCOSA);
@@ -102,64 +85,52 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         @Override
         public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-            //drop table to create new one if database version updated
             sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_USERS);
         }
 
     public void addPresion(Presion presion) {
 
-        //get writable database
         SQLiteDatabase db = this.getWritableDatabase();
-        //create content values to insert
         ContentValues values = new ContentValues();
-        //Put username in  @values
         values.put(REGISTRO, presion.registro);
-        //Put email in  @values
         values.put(PULSOS, presion.pulsos);
-        //Put password in  @values
         values.put(USUARIO, presion.usuario);
         values.put(FECHA, presion.fecha);
-        // insert row
         long todo_id = db.insert(TABLE_PRESION, null, values);
     }
 
 
 
-        //using this method we can add users to user table
+        //Metodo para agregar usuario
         public void addUser(User user) {
 
-            //get writable database
+
             SQLiteDatabase db = this.getWritableDatabase();
 
-            //create content values to insert
             ContentValues values = new ContentValues();
 
-            //Put username in  @values
             values.put(KEY_USER_NAME, user.userName);
 
-            //Put email in  @values
             values.put(KEY_EMAIL, user.email);
 
-            //Put password in  @values
             values.put(KEY_PASSWORD, user.password);
 
-            // insert row
             long todo_id = db.insert(TABLE_USERS, null, values);
         }
 
         public User Authenticate(User user) {
             SQLiteDatabase db = this.getReadableDatabase();
-            Cursor cursor = db.query(TABLE_USERS,// Selecting Table
-                    new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},//Selecting columns want to query
+            Cursor cursor = db.query(TABLE_USERS,// Eligiendo la tabla
+                    new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},
                     KEY_EMAIL + "=?",
                     new String[]{user.email},//Where clause
                     null, null, null);
 
             if (cursor != null && cursor.moveToFirst() && cursor.getCount()>0) {
-                //if cursor has value then in user database there is user associated with this given email
+                //si el cursor tiene valor, entonces en la base de datos del usuario hay un usuario asociado con este correo electrónico dado
                 User user1 = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
 
-                //Match both passwords check they are same or not
+                //Comprueba contraseñas
                 if (user.password.equalsIgnoreCase(user1.password)) {
                     return user1;
                 }
@@ -169,20 +140,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return null;
         }
 
+
         public boolean isEmailExists(String email) {
             SQLiteDatabase db = this.getReadableDatabase();
             Cursor cursor = db.query(TABLE_USERS,// Selecting Table
-                    new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},//Selecting columns want to query
+                    new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},//Seleccionar columnas consultadas
                     KEY_EMAIL + "=?",
                     new String[]{email},//Where clause
                     null, null, null);
 
             if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
-                //if cursor has value then in user database there is user associated with this given email so return true
+                //si el cursor tiene valor, entonces en la base de datos del usuario hay un usuario
+                // asociado con este correo electrónico dado, así que devuelva true
                 return true;
             }
-
-            //if email does not exist return false
+            //si el correo electrónico no existe devolver false
             return false;
         }
 

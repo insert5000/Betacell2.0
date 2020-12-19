@@ -1,19 +1,12 @@
 package com.example.betacell;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.betacell.ConsejosAtv.Alimentacion;
 import com.example.betacell.ConsejosAtv.Alimentos;
 import com.example.betacell.ConsejosAtv.Ejercicios;
 import com.example.betacell.ConsejosAtv.Hidratacion;

@@ -18,43 +18,29 @@
 
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#1F596D"
+        android:background="#000f29"
         android:gravity="center"
         android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/magen_icon"
-            android:layout_marginBottom="1dp"
-            android:padding="1dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BETACELL"
-            android:textColor="#E63764"
-            android:textSize="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="MissingConstraints"
-            android:textStyle="italic|bold"
-            android:fontFamily="sans-serif"/>
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="-70dp"
+            android:src="@drawable/icono_betacell" />
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "match_parent"
-            android:layout_height = "wrap_content"
+            android:layout_height = "50dp"
             android:id="@+id/textInputLayoutEmail"
-            android:layout_marginHorizontal="50dp"
+            android:layout_marginHorizontal="30dp"
             android:layout_marginTop="1dp"
             app:errorEnabled="true"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="20dp"
             android:textColorHint="#ffffff"
             app:startIconDrawable="@drawable/ic_email"
+            android:background="@drawable/inputs_bc"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -62,6 +48,7 @@
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:textColor="#ffffff"
@@ -73,21 +60,23 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "match_parent"
-            android:layout_height = "wrap_content"
+            android:layout_height = "50dp"
             android:id="@+id/textInputLayoutPassword"
             android:layout_marginTop="1dp"
+            android:background="@drawable/inputs_bc"
             app:errorEnabled="true"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="40dp"
             android:textColorHint="#ffffff"
             app:boxStrokeColor="#fff"
             app:startIconDrawable="@drawable/ic_pass"
-            android:layout_marginHorizontal="50dp"
+            android:layout_marginHorizontal="30dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:hint="Contraseña"
                 android:inputType="textEmailAddress"
                 android:textColor="#ffffff"
@@ -116,7 +105,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/textViewCreateAccount"
             android:text="Crear cuenta"
-            android:textColor="#ffffff"/>
+            android:textColor="#26bed6"
+            android:textStyle="bold"
+            />
        
 
     </LinearLayout>

@@ -10,49 +10,37 @@
     <LinearLayout
 
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#FF1F596D"
+        android:background="#000f29"
         android:gravity="center"
+        >
 
-        android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:layout_marginBottom="5dp"
-            android:padding="5dp"
-            android:src="@drawable/magen_icon" />
+            android:layout_marginTop="-70dp"
+            android:src="@drawable/icono_betacell" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BETACELL"
-            android:textColor="#E63764"
-            android:textSize="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="MissingConstraints"
-            android:textStyle="italic|bold"
-            android:fontFamily="sans-serif"/>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "match_parent"
             android:layout_height = "50dp"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="30dp"
             android:id="@+id/textInputLayoutUserName"
             android:layout_marginTop="16dp"
             app:startIconDrawable="@drawable/ic_baseline_account_box_24"
             app:errorEnabled="true"
-            android:layout_marginBottom="10dp"
+            android:background="@drawable/inputs_bc"
+            android:layout_marginBottom="15dp"
             android:textColorHint="#ffffff"          >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextUserName"
                 android:layout_width="match_parent"
                 android:layout_height="39dp"
+                android:layout_marginHorizontal="10dp"
                 android:hint="Nombres"
                 android:inputType="textEmailAddress"
                 android:textColor="#ffffff"
@@ -65,10 +53,11 @@
             android:layout_width = "match_parent"
             android:layout_height = "50dp"
             android:id="@+id/textInputLayoutEmail"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="30dp"
             android:layout_marginTop="1dp"
+            android:background="@drawable/inputs_bc"
             app:errorEnabled="true"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="15dp"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
             app:startIconDrawable="@drawable/ic_email"
@@ -79,6 +68,7 @@
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:fontFamily="sans-serif"
@@ -89,22 +79,26 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "match_parent"
             android:layout_height = "50dp"
+            android:layout_marginHorizontal="30dp"
             android:id="@+id/textInputLayoutPassword"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/inputs_bc"
             app:errorEnabled="true"
-            app:startIconDrawable="@drawable/ic_pass"
-            android:layout_marginBottom="10dp"
-            android:textColorHint="#ffffff">
+            android:layout_marginBottom="15dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            app:startIconDrawable="@drawable/ic_pass">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="40dp"
                 android:hint="Contraseña"
                 android:inputType="textEmailAddress"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
-                />
+                                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,9 +108,9 @@
             android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="60dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/btn_forma"
             android:elevation="5dp"
             android:text="@string/btn_regis"
@@ -128,7 +122,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textViewLogin"
             android:hint="Regresar al login"
-            android:textColorHint="#ffffff"
+            android:textColorHint="#26bed6"
+            android:textStyle="bold"
             />
 
 

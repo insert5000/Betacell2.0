@@ -6,28 +6,40 @@
     tools:context=".Fragments.MenuFragment"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     android:id="@+id/menuFra"
-    android:background="#ffffff">
+    android:background="#000f29">
 
-    <ImageView
 
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:id="@+id/img_icono"
-        android:src="@drawable/magen_icon"
-        android:layout_marginTop="25dp"/>
     <TextView
         android:id="@+id/textIcono"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
         android:text="@string/text_icono"
         android:layout_alignTop="@+id/img_icono"
-        android:layout_marginTop="149dp"
-        android:textAlignment="center"
-        android:textColor="#E63764"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
         android:textSize="30dp"
-        android:gravity="center_horizontal"
-        android:textStyle="italic|bold"
+        android:textStyle="bold"
         android:fontFamily="sans-serif"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="30dp"
+        android:layout_toEndOf="@+id/textIcono"
+        android:layout_toRightOf="@+id/textIcono"
+        android:src="@drawable/logo_unico" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salud y bienestar"
+        android:layout_below="@id/textIcono"
+        android:layout_marginHorizontal="30dp"
+        android:fontFamily="sans-serif"
+        android:textSize="15dp"
+        android:textColor="#BFBDBD"/>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -36,7 +48,7 @@
         android:padding="4dp"
         android:columnCount="2"
         android:rowCount="3"
-        android:layout_below="@+id/img_icono"
+        android:layout_below="@+id/textIcono"
         android:layout_marginTop="50dp"
 
         >
@@ -57,28 +69,29 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:orientation="vertical"
-
-
-                >
+                android:background="#19283e">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/presion" />
+                    android:src="@drawable/presion"
+                    android:layout_marginTop="35dp" />
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="Presion"
                     android:textAlignment="center"
-                    android:textColor="#E63764"
+                    android:textColor="#FFFFFF"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:fontFamily="sans-serif"/>
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    />
 
 
             </LinearLayout>
@@ -100,21 +113,24 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#19283e">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/glucosa"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:layout_gravity="center_horizontal"
                     android:text="Glucosa"
                     android:textAlignment="center"
-                    android:textColor="#E63764"
+                    android:textColor="#FFFFFF"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
@@ -139,21 +155,24 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#19283e">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/gps"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
                     android:text="Farmacias Cercanas"
                     android:textAlignment="center"
-                    android:textColor="#E63764"
+                    android:textColor="#FFFFFF"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
@@ -178,21 +197,24 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#19283e">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/bitacora"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
                     android:text="Bitacora"
                     android:textAlignment="center"
-                    android:textColor="#E63764"
+                    android:textColor="#FFFFFF"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
@@ -217,12 +239,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#19283e">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/alarma"/>
                 <TextView
@@ -230,8 +254,9 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:text="Alarma"
+                    android:layout_marginTop="10dp"
                     android:textAlignment="center"
-                    android:textColor="#E63764"
+                    android:textColor="#FFFFFF"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
@@ -256,21 +281,24 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#19283e">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/consejos"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
                     android:text="Consejos"
                     android:textAlignment="center"
-                    android:textColor="#E63764"
+                    android:textColor="#FFFFFF"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"/>
