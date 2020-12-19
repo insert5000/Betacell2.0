@@ -6,25 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".Glucosa"
     android:orientation="vertical"
-    android:background="#FF1F596D"
+    android:background="#000f29"
     >
 
-    <fragment
-        android:id="@+id/fragment1"
-        android:name="com.example.betacell.Fragments.MenuFragment"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="241dp" />
+        android:layout_height="150dp"
+        android:orientation="vertical">
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="REGISTRO DE GLUCOSA"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        android:textStyle="bold"
+    />
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Llene todos los campos"
+            android:textColor="#BFBDBD"
+            android:layout_marginHorizontal="30dp"
+            />
+
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:background="@drawable/fomulario"
+
+       android:paddingVertical="40dp">
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tex_glucosa"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:textSize="18sp"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="16dp"
         android:fontFamily="sans-serif"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textAlignment="center"
         android:gravity="center_horizontal" />
     <EditText
@@ -32,35 +57,34 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
+        android:layout_marginHorizontal="30dp"
         android:inputType="numberDecimal"
-        android:textColorHint="#ffffff"
-        android:hint="2-30                           mmol/L"
-        android:textColor="#ffffff"
-        android:background="#C92C7893"/>
+        android:textColorHint="#000f29"
+        android:hint="2-30"
+        android:paddingHorizontal="30dp"
+        android:textColor="#000f29"
+        android:background="@drawable/in_formularios"/>
 
     <TextView
         android:id="@+id/txt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="25dp"
         android:text="@string/text_glucosa2"
-        android:textSize="18sp"
+        android:textSize="16dp"
         android:fontFamily="sans-serif"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textAlignment="center"
         android:gravity="center_horizontal" />
 
     <Spinner
         android:id="@+id/sppiner"
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="50dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_height="30dp"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
 
         android:background="@drawable/sppiner_style"
 
@@ -72,9 +96,8 @@
         android:id="@+id/guardar_glucosa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/btn_forma"
         android:elevation="5dp"
@@ -83,4 +106,5 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         />
+   </LinearLayout>
 </LinearLayout>

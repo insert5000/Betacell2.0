@@ -74,7 +74,7 @@ public class MainActivity extends FragmentActivity {
 
     private void crearCuenta() {
         TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
-        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>No tengo una cuenta creada </font><font color='#F44336'>Crear una cuenta</font>"));
+        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>No tengo una cuenta creada </font><font color='#26bed6'>Crear una cuenta</font>"));
         textViewCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

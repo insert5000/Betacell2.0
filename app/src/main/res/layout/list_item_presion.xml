@@ -5,120 +5,124 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+   
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/cardPresion"
-        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_bitacora"
         android:padding="5dp"
-        android:layout_margin="10dp"
+       >
 
 
-        >
 
-        <RelativeLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:background="#1F596D"
-            android:padding="10dp">
+            android:orientation="horizontal"
+            android:background="@drawable/card_bitacora"
+            >
 
-
-            <ImageView
-                android:id="@+id/imagen"
-                android:src="@drawable/presion"
+            <LinearLayout
                 android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginTop="-5dp"
-                android:paddingTop="5dp" />
+                android:layout_height="80dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/contorno_bitacora"
+                android:gravity="center">
 
-            <TextView
-                android:id="@+id/txt_registro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="-90dp"
-                android:layout_toEndOf="@+id/imagen"
-                android:layout_toRightOf="@+id/imagen"
-                android:text="Registro:"
-                android:textColor="#ffffff"
-                android:fontFamily="sans-serif"
-                android:textSize="15sp"/>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
 
-            <TextView
-                android:id="@+id/registro_db"
+                    android:src="@drawable/presion_blanco" />
+
+            </LinearLayout>
+
+            <LinearLayout
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INFORMACION"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginVertical="10dp"                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pulsos"
+                    android:textColor="#9C9B9B"
+                    android:textSize="13dp"
+                    android:fontFamily="sans-serif"
+                    />
+               <TextView
+                   android:id="@+id/pulsos_db"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="35"
+                   android:textColor="#fff"
+                   android:textSize="15dp"
+                   android:gravity="center"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Fecha"
+                   android:textColor="#9C9B9B"
+                   android:fontFamily="sans-serif"
+                   android:textSize="13dp"
+                   />
+               <TextView
+                   android:id="@+id/fecha_db"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:text="Fecha"
+                   android:textColor="#fff"
+                   android:textSize="15dp"
+                   android:fontFamily="sans-serif"
+                   android:gravity="center"
+                   android:layout_marginBottom="5dp"
+                   />
+           </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="33dp"
-                android:layout_marginLeft="33dp"
-                android:layout_toEndOf="@+id/txt_registro"
-                android:layout_toRightOf="@+id/txt_registro"
-                android:text="Muestra"
-                android:textColor="#ffffff"
-                android:fontFamily="sans-serif"
-                android:textSize="15sp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9C9B9B"
+                    android:text="Registro"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    />
+                <TextView
+                    android:id="@+id/registro_db"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#295AD3"
+                    android:text="12"
+                    android:textSize="29dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/txt_pulso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_registro"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="12dp"
-                android:layout_toEndOf="@+id/imagen"
-                android:layout_toRightOf="@+id/imagen"
-                android:text="Pulsos:"
-                android:textColor="#ffffff"
-                android:fontFamily="sans-serif"
-                android:textSize="15sp"/>
-
-            <TextView
-                android:id="@+id/pulsos_db"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/registro_db"
-                android:layout_marginStart="41dp"
-                android:layout_marginLeft="41dp"
-                android:layout_marginTop="11dp"
-                android:layout_toEndOf="@+id/txt_pulso"
-                android:layout_toRightOf="@+id/txt_pulso"
-                android:text="Muestra"
-                android:textColor="#ffffff"
-                android:fontFamily="sans-serif"
-                android:textSize="15sp"/>
-
-            <TextView
-                android:id="@+id/txt_fecha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_pulso"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="-90dp"
-                android:layout_marginTop="11dp"
-                android:layout_toEndOf="@+id/imagen"
-                android:layout_toRightOf="@+id/imagen"
-                android:text="Fecha:"
-                android:textColor="#ffffff"
-                android:fontFamily="sans-serif"
-                android:textSize="15sp"/>
-
-            <TextView
-                android:id="@+id/fecha_db"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pulsos_db"
-                android:layout_marginStart="45dp"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="12dp"
-                android:layout_toEndOf="@+id/txt_fecha"
-                android:layout_toRightOf="@+id/txt_fecha"
-                android:text="Muestra"
-                android:textColor="#ffffff"
-                android:fontFamily="sans-serif"
-                android:textSize="15sp"/>
-
-
-        </RelativeLayout>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
