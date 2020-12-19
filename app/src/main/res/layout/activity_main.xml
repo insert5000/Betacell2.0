@@ -40,6 +40,7 @@
             android:layout_marginBottom="20dp"
             android:textColorHint="#ffffff"
             app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="#fff"
             android:background="@drawable/inputs_bc"
             >
 
@@ -70,6 +71,7 @@
             app:boxStrokeColor="#fff"
             app:startIconDrawable="@drawable/ic_pass"
             android:layout_marginHorizontal="30dp"
+            app:startIconTint="#fff"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -78,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:hint="Contraseña"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
                 android:fontFamily="sans-serif"/>

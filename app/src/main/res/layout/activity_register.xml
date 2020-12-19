@@ -31,6 +31,7 @@
             android:id="@+id/textInputLayoutUserName"
             android:layout_marginTop="16dp"
             app:startIconDrawable="@drawable/ic_baseline_account_box_24"
+               app:startIconTint="#fff"
             app:errorEnabled="true"
             android:background="@drawable/inputs_bc"
             android:layout_marginBottom="15dp"
@@ -61,6 +62,7 @@
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
             app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="#fff"
 
             >
 
@@ -72,6 +74,8 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:fontFamily="sans-serif"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -87,7 +91,8 @@
             android:layout_marginBottom="15dp"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            app:startIconDrawable="@drawable/ic_pass">
+            app:startIconDrawable="@drawable/ic_pass"
+            app:startIconTint="#fff">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextPassword"
@@ -95,7 +100,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content"
                 android:hint="Contraseña"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
                                 />
