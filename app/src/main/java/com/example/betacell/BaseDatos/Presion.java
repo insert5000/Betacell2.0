@@ -6,24 +6,30 @@ public class Presion  {
 
     public String id;
     public String usuario;
-    public String registro;
+    public String diastola;
     public String pulsos;
     public String fecha;
+    public String sistola;
 
-    public Presion(String id, String registro, String pulsos, String fecha,String usuario) {
+    public Presion(String id, String diastola, String pulsos, String fecha,String usuario,String sistola) {
         this.id = id;
-        this.registro = registro;
+        this.diastola = diastola;
+        this.sistola =sistola;
         this.pulsos = pulsos;
         this.fecha = fecha;
         this.usuario=usuario;
+
     }
 
     public Presion(){
 
     }
 
-    public String getRegistro(){return registro;}
-    public void setRegistro(String registro){this.registro=registro;}
+    public String getDiastola(){return diastola;}
+    public void setDiastola(String diastola){this.diastola=diastola;}
+
+    public String getSistola(){return sistola;}
+    public void setSistola(String sistola){this.sistola=sistola;}
 
     public String getPulsos(){return pulsos;}
     public void setPulsos(String pulsos){this.pulsos=pulsos;}

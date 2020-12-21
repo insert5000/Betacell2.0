@@ -21,20 +21,18 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterActivity extends FragmentActivity {
 
-    //Declaration EditTexts
+    //Declaracion de los EditTexts
     EditText editTextUserName;
     EditText editTextEmail;
     EditText editTextPassword;
 
-    //Declaration TextInputLayout
+    //Dlecaracion de los  TextInputLayout
     TextInputLayout textInputLayoutUserName;
     TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutPassword;
 
-    //Declaration Button
     Button buttonRegister;
 
-    //Declaration DatabaseHelper
     DatabaseHelper databaseHelper;
 
     @Override
@@ -49,15 +47,15 @@ public class RegisterActivity extends FragmentActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (validate()) {
+                if (validarDatos()) {
                     String UserName = editTextUserName.getText().toString();
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    //Check in the database is there any user associated with  this email
+                    //Se verifica si el email ya se registro con otro usuario
                     if (!databaseHelper.isEmailExists(Email)) {
 
-                        //Email does not exist now add new user to database
+                        //Si no existe el correo se agrega el usuario nuevo
                         databaseHelper.addUser(new User(null, UserName, Email, Password));
                         Snackbar.make(buttonRegister, "Usuario creado! Ingresar ", Snackbar.LENGTH_LONG).show();
                         new Handler().postDelayed(new Runnable() {
@@ -68,7 +66,6 @@ public class RegisterActivity extends FragmentActivity {
                         }, Snackbar.LENGTH_LONG);
                     }else {
 
-                        //Email exists with email input provided so show error user already exist
                         Snackbar.make(buttonRegister, "Usuario ya registrado", Snackbar.LENGTH_LONG).show();
                     }
 
@@ -78,7 +75,7 @@ public class RegisterActivity extends FragmentActivity {
         });
     }
 
-    //this method used to set Login TextView click event
+
     private void initTextViewLogin() {
         TextView textViewLogin = (TextView) findViewById(R.id.textViewLogin);
         textViewLogin.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +86,7 @@ public class RegisterActivity extends FragmentActivity {
         });
     }
 
-    //this method is used to connect XML views to its Objects
+
     private void initViews() {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -101,54 +98,54 @@ public class RegisterActivity extends FragmentActivity {
 
     }
 
-    //This method is used to validate input given by user
-    public boolean validate() {
-        boolean valid = false;
+    //Validar los text
+    public boolean validarDatos() {
+        boolean validar = false;
 
         //Get values from EditText fields
         String UserName = editTextUserName.getText().toString();
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
 
-        //Handling validation for UserName field
+        //Validacion campo usuario
         if (UserName.isEmpty()) {
-            valid = false;
+            validar = false;
             textInputLayoutUserName.setError("Ingrese usuario valido!");
         } else {
             if (UserName.length() > 5) {
-                valid = true;
+                validar = true;
                 textInputLayoutUserName.setError(null);
             } else {
-                valid = false;
-                textInputLayoutUserName.setError("Usuario muy corto!");
+                validar = false;
+                textInputLayoutUserName.setError("nombre de usuario muy corto!");
             }
         }
 
-        //Handling validation for Email field
+        //Validacion para el correo
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            valid = false;
+            validar = false;
             textInputLayoutEmail.setError("Ingrese correo valido!");
         } else {
-            valid = true;
+            validar = true;
             textInputLayoutEmail.setError(null);
         }
 
-        //Handling validation for Password field
+        //Validacion de contraseña
         if (Password.isEmpty()) {
-            valid = false;
+            validar = false;
             textInputLayoutPassword.setError("Ingrese contraseña valida!");
         } else {
             if (Password.length() > 5) {
-                valid = true;
+                validar = true;
                 textInputLayoutPassword.setError(null);
             } else {
-                valid = false;
+                validar = false;
                 textInputLayoutPassword.setError("Contraseña muy corta!");
             }
         }
 
 
-        return valid;
+        return validar;
     }
 
 

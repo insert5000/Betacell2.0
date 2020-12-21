@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -30,15 +31,25 @@ public class Glucosa extends FragmentActivity {
     Dialog pAerror;
     Button bPerror;
     EditText r_glucosa;
+    NumberPicker piker_1_g;
+    NumberPicker piker_2_g;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glucosa);
         pAceptar = new Dialog(this);
         //pAerror = new Dialog(this);
-        r_glucosa=(EditText)findViewById(R.id.mol);
         sppiner = (Spinner)findViewById(R.id.sppiner);
         guardar=(Button)findViewById(R.id.guardar_glucosa);
+        piker_1_g=(NumberPicker)findViewById(R.id.piker_1_g);
+        piker_2_g=(NumberPicker)findViewById(R.id.piker_2_g);
+
+        piker_1_g.setMinValue(0);
+        piker_1_g.setMaxValue(40);
+
+        piker_2_g.setMinValue(0);
+        piker_2_g.setMaxValue(9);
 
 
 
@@ -62,10 +73,11 @@ public class Glucosa extends FragmentActivity {
         DatabaseHelper conn=new DatabaseHelper(this,"betacellDB",null,1);
         Date d = new Date();
         String fDate = new SimpleDateFormat("yyyy-MM-dd").format(d);
+        String muestra = piker_1_g.getValue()+"."+piker_2_g.getValue();
         SQLiteDatabase db=conn.getWritableDatabase();
 
         ContentValues values=new ContentValues();
-        values.put(DatabaseHelper.MEDICION_GLUCOSA,r_glucosa.getText().toString());
+        values.put(DatabaseHelper.MEDICION_GLUCOSA, muestra);
         values.put(DatabaseHelper.CONDICION,sppiner.getSelectedItem().toString());
         values.put(DatabaseHelper.USUARIO_GLUCOSA,"DERIAN");
         values.put(DatabaseHelper.FECHA_GLUCOSA, fDate);
@@ -82,7 +94,7 @@ public class Glucosa extends FragmentActivity {
         pAceptar.setContentView(R.layout.popup_aceptar);
         bPaceptar = (Button) pAceptar.findViewById(R.id.btn_correcto);
 
-            bPaceptar.setOnClickListener(new View.OnClickListener() {
+        bPaceptar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     pAceptar.dismiss();

@@ -8,7 +8,7 @@
     <string name="text_icono">BetaCell</string>
     <string name="tex_glucosa">¿Cuál es su última lectura de glucosa en sangre?</string>
     <string name="text_glucosa2">Se realizo la medicion de glucosa cuando...</string>
-    <string name="tex_presion">¿Cuál es su registro de presion?(mmHg)</string>
+    <string name="tex_presion">¿Cuál es su registro de presion?</string>
     <string name="text_presion2">Su pulsos por minutos son...</string>
 
 

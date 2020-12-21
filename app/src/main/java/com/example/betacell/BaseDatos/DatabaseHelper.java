@@ -10,12 +10,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-        //DB NAME
+        //DB NOMBRE
         public static final String DATABASE_NAME = "betacellDB";
         //DB VERSION
         public static final int DATABASE_VERSION = 1;
         public static final String TABLE_USERS = "users";
-        //TABLA USUARIO COLUMNS
+        //COLUMNAS TABLA USUARIO
         public static final String KEY_ID = "id";
         public static final String KEY_USER_NAME = "username";
         public static final String KEY_EMAIL = "email";
@@ -31,16 +31,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         public static final String TABLE_PRESION = "presion";
-        //TABLE PRESS COLUMNS
+        //COLUMNAS TABLA PRESION
         public static final String ID = "id";
-        public static final String REGISTRO = "registro";
+        public static final String SISTOLA = "sistola";
+        public static final String DIASTOLA = "diastola";
         public static final String PULSOS = "pulsos";
         public static final String FECHA = "fecha";
         public static final String USUARIO = "usuario";
         public static final String SQL_TABLE_PRESION = " CREATE TABLE " + TABLE_PRESION
                 + " ( "
                 + ID + " INTEGER PRIMARY KEY, "
-                + REGISTRO + " TEXT, "
+                + SISTOLA + " TEXT, "
+                + DIASTOLA + " TEXT, "
                 + PULSOS + " TEXT, "
                 + FECHA + " TEXT,"
                 + USUARIO + " TEXT"
@@ -49,7 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         public static final String TABLE_GLUCOSA = "glucosa";
-        //TABLE GLUCOSA COLUMNS
+        //COLUMNAS TABLA GLUCOSA
         public static final String ID_GLUCOSA = "id";
         public static final String MEDICION_GLUCOSA = "medicionGlucosa";
         public static final String CONDICION = "condicion";
@@ -86,44 +88,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         @Override
         public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
             sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_USERS);
+            sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_GLUCOSA);
+            sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_PRESION);
         }
 
-    public void addPresion(Presion presion) {
 
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(REGISTRO, presion.registro);
-        values.put(PULSOS, presion.pulsos);
-        values.put(USUARIO, presion.usuario);
-        values.put(FECHA, presion.fecha);
-        long todo_id = db.insert(TABLE_PRESION, null, values);
-    }
 
 
 
         //Metodo para agregar usuario
         public void addUser(User user) {
-
-
             SQLiteDatabase db = this.getWritableDatabase();
-
             ContentValues values = new ContentValues();
-
             values.put(KEY_USER_NAME, user.userName);
-
             values.put(KEY_EMAIL, user.email);
-
             values.put(KEY_PASSWORD, user.password);
-
             long todo_id = db.insert(TABLE_USERS, null, values);
         }
 
+        //Metodo para autentificar usuario
         public User Authenticate(User user) {
             SQLiteDatabase db = this.getReadableDatabase();
             Cursor cursor = db.query(TABLE_USERS,// Eligiendo la tabla
                     new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},
                     KEY_EMAIL + "=?",
-                    new String[]{user.email},//Where clause
+                    new String[]{user.email},//Where clausula
                     null, null, null);
 
             if (cursor != null && cursor.moveToFirst() && cursor.getCount()>0) {
@@ -136,7 +125,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 }
             }
 
-            //if user password does not matches or there is no record with that email then return @false
+            //si la contraseña del usuario no coincide o no hay registro con ese correo electrónico,
+            // devuelva @false
             return null;
         }
 
@@ -146,7 +136,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Cursor cursor = db.query(TABLE_USERS,// Selecting Table
                     new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},//Seleccionar columnas consultadas
                     KEY_EMAIL + "=?",
-                    new String[]{email},//Where clause
+                    new String[]{email},//Where clausula
                     null, null, null);
 
             if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {

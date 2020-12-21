@@ -34,23 +34,23 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         databasehelper = new DatabaseHelper(this);
         crearCuenta();
-        initViews();
+        iniciarVistas();
         final Button buttonLogin = findViewById(R.id.buttonLogin);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Check user input is correct or not
-                if (validate()) {
+                //validamos usuario
+                if (validar()) {
 
-                    //Get values from EditText fields
+                    //Obtenemos valores de los editText
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    //Authenticate user
+                    //Autentificamos al usuario
                     User currentUser = databasehelper.Authenticate(new User(null, null, Email, Password));
 
-                    //Check Authentication is successful or not
+                    //Se comprueba si la autentificacion fue exitosa o no
                     if (currentUser != null) {
                         Snackbar.make(buttonLogin, "Bienvenido!", Snackbar.LENGTH_LONG).show();
 
@@ -60,7 +60,7 @@ public class MainActivity extends FragmentActivity {
                         finish();
                     } else {
 
-                        //User Logged in Failed
+                        //Inicio de sesion fallido
                         Snackbar.make(buttonLogin, "Email no registrado", Snackbar.LENGTH_LONG).show();
 
 
@@ -72,6 +72,7 @@ public class MainActivity extends FragmentActivity {
 
     }
 
+    //Metodo para abrir el activity de registro
     private void crearCuenta() {
         TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
         textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>No tengo una cuenta creada </font><font color='#26bed6'>Crear una cuenta</font>"));
@@ -84,8 +85,8 @@ public class MainActivity extends FragmentActivity {
         });
     }
 
-    //this method is used to connect XML views to its Objects
-    private void initViews() {
+    //Metodo para iniciar vistas
+    private void iniciarVistas() {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
@@ -104,36 +105,36 @@ public class MainActivity extends FragmentActivity {
         }
         return result;
     }
-    public boolean validate() {
-        boolean valid = false;
+    public boolean validar() {
+        boolean valido = false;
 
-        //Get values from EditText fields
+        //Obtenemos los valores de los editText
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
 
-        //Handling validation for Email field
+        //Validacion para el correo
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            valid = false;
+            valido = false;
             textInputLayoutEmail.setError("Ingrese email valido!");
         } else {
-            valid = true;
+            valido = true;
             textInputLayoutEmail.setError(null);
         }
 
-        //Handling validation for Password field
+        //Validacion para la contraseña
         if (Password.isEmpty()) {
-            valid = false;
-            textInputLayoutPassword.setError("Ingrese otra contraseña!");
+            valido = false;
+            textInputLayoutPassword.setError("Ingrese su contraseña!");
         } else {
             if (Password.length() > 5) {
-                valid = true;
+                valido = true;
                 textInputLayoutPassword.setError(null);
             } else {
-                valid = false;
+                valido = false;
                 textInputLayoutPassword.setError("Contraseña demasiado corta!");
             }
         }
 
-        return valid;
+        return valido;
     }
 }

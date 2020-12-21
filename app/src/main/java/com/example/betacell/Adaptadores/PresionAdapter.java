@@ -35,9 +35,11 @@ public class PresionAdapter extends RecyclerView.Adapter<PresionAdapter.PresionV
     @Override
     public void onBindViewHolder( PresionViewHolder holder, int position) {
 
-        holder.registro.setText(listaPresion.get(position).getRegistro());
+        holder.sistola.setText(listaPresion.get(position).getSistola());
         holder.pulsos.setText(listaPresion.get(position).getPulsos());
         holder.fecha.setText(listaPresion.get(position).getFecha());
+        holder.diastola.setText(listaPresion.get(position).getDiastola());
+
 
     }
 
@@ -49,15 +51,18 @@ public class PresionAdapter extends RecyclerView.Adapter<PresionAdapter.PresionV
     public class PresionViewHolder extends RecyclerView.ViewHolder {
 
         CardView card;
-        TextView registro;
+        TextView diastola;
+        TextView sistola;
         TextView pulsos;
         TextView fecha;
+
 
         public PresionViewHolder(@NonNull View itemView) {
             super(itemView);
 
             card=(CardView)itemView.findViewById(R.id.cardPresion);
-            registro=(TextView)itemView.findViewById(R.id.registro_db);
+            diastola=(TextView)itemView.findViewById(R.id.diastolica_db);
+            sistola=(TextView)itemView.findViewById(R.id.sistolica_db);
             pulsos=(TextView)itemView.findViewById(R.id.pulsos_db);
             fecha=(TextView)itemView.findViewById(R.id.fecha_db);
 

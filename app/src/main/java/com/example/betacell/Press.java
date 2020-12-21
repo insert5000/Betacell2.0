@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,9 @@ public class Press extends FragmentActivity {
 
     Dialog pAerror;
     Button bPerror;
+
+    NumberPicker piker_p_s;
+    NumberPicker piker2_p_d;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +44,15 @@ public class Press extends FragmentActivity {
 
         registrar = (Button)findViewById(R.id.guardar_Presion);
         pulsos = (EditText)findViewById(R.id.pulsos_txt);
-        registro =(EditText)findViewById(R.id.regitroPresion_txt);
+
+        piker_p_s=(NumberPicker)findViewById(R.id.piker_p_s);
+        piker2_p_d=(NumberPicker)findViewById(R.id.piker2_p_d);
+
+        piker_p_s.setMinValue(50);
+        piker_p_s.setMaxValue(200);
+
+        piker2_p_d.setMinValue(30);
+        piker2_p_d.setMaxValue(150);
 
             pAceptar = new Dialog(this);
            // pAerror = new Dialog(this);
@@ -78,10 +90,13 @@ public class Press extends FragmentActivity {
         DatabaseHelper conn=new DatabaseHelper(this,"betacellDB",null,1);
         Date d = new Date();
         String fDate = new SimpleDateFormat("yyyy-MM-dd").format(d);
+        String sistola =  piker_p_s.getValue()+"";
+        String diastola =  piker2_p_d.getValue()+"";
         SQLiteDatabase db=conn.getWritableDatabase();
 
         ContentValues values=new ContentValues();
-        values.put(DatabaseHelper.REGISTRO,registro.getText().toString());
+        values.put(DatabaseHelper.SISTOLA,sistola);
+        values.put(DatabaseHelper.DIASTOLA,diastola);
         values.put(DatabaseHelper.PULSOS,pulsos.getText().toString());
         values.put(DatabaseHelper.USUARIO,"DERIAN");
         values.put(DatabaseHelper.FECHA,fDate);

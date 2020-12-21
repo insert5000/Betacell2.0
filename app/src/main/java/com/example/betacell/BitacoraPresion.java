@@ -45,9 +45,10 @@ public class BitacoraPresion extends FragmentActivity {
 
         while (cursor.moveToNext()){
             presion =new Presion();
-            presion.setRegistro(cursor.getString(1));
-            presion.setPulsos(cursor.getString(2));
-            presion.setFecha(cursor.getString(3));
+            presion.setSistola(cursor.getString(1));
+            presion.setDiastola(cursor.getString(2));
+            presion.setPulsos(cursor.getString(3));
+            presion.setFecha(cursor.getString(4));
 
             listaPresion.add(presion);
 
