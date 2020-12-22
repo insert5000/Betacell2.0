@@ -8,4 +8,7 @@
         <item name="colorControlNormal">#FFFFFF</item>
     </style>
 
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/coloralarma</item>
+    </style>
 </resources>

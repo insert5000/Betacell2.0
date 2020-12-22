@@ -54,7 +54,7 @@ public class Alarma extends FragmentActivity {
                 mes = actual.get(Calendar.MONTH);
                 dia = actual.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog datePickerDialog = new DatePickerDialog(v.getContext(), new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(v.getContext(),R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int y, int m, int d) {
 
@@ -79,7 +79,7 @@ public class Alarma extends FragmentActivity {
                 hora = actual.get(Calendar.HOUR_OF_DAY);
                 minutos = actual.get(Calendar.MINUTE);
 
-                TimePickerDialog timePickerDialog = new TimePickerDialog(v.getContext(), new TimePickerDialog.OnTimeSetListener() {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(v.getContext(),R.style.DialogTheme, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int h, int m) {
                         calendar.set(Calendar.HOUR_OF_DAY,h);
