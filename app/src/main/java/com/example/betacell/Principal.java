@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.betacell.Web.ConsejosWeb;
+
 public class Principal extends FragmentActivity implements View.OnClickListener{
 
 
@@ -60,7 +62,7 @@ public class Principal extends FragmentActivity implements View.OnClickListener{
                 startActivity(i);
                 break;
             case R.id.consejos:
-                i = new Intent(this, Consejos.class);
+                i = new Intent(this, ConsejosWeb.class);
                 startActivity(i);
                 break;
         }

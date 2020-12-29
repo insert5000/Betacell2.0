@@ -16,14 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConsejosAtv.Alimentos"></activity>
+        <activity android:name=".Web.ConsejosWeb"></activity>
+        <activity android:name=".ConsejosAtv.Alimentos" />
         <activity android:name=".ConsejosAtv.Ejercicios" />
         <activity android:name=".ConsejosAtv.Riesgo" />
         <activity android:name=".ConsejosAtv.Pies" />
         <activity android:name=".ConsejosAtv.Hidratacion" />
         <activity android:name=".BitacoraGlucosa" />
         <activity android:name=".BitacoraPresion" />
-        <activity android:name=".Adaptadores.PresionAdapter" />
         <activity android:name=".Splash.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
