@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/fragment_container"
+    android:id="@+id/fragment_container2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-</FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/top"
+        android:background="#000f29"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mapas"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:paddingVertical="20dp"
+            android:background="#000f29"
+            android:padding="20dp"/>
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/top"
+    android:background="#000f29"
+
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/fragment_container"
+        android:background="@drawable/fomulario"
+        >
+
+    </FrameLayout>
+</LinearLayout>
+</RelativeLayout>
