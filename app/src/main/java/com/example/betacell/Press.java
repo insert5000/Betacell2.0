@@ -4,6 +4,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.app.Dialog;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -12,6 +13,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +36,8 @@ public class Press extends FragmentActivity {
     Dialog pAerror;
     Button bPerror;
 
+    ImageView help;
+
     NumberPicker piker_p_s;
     NumberPicker piker2_p_d;
     @Override
@@ -42,6 +46,7 @@ public class Press extends FragmentActivity {
         setContentView(R.layout.activity_presion2);
         databaseHelper = new DatabaseHelper(this);
 
+        help = (ImageView)findViewById(R.id.help_presion);
         registrar = (Button)findViewById(R.id.guardar_Presion);
         pulsos = (EditText)findViewById(R.id.pulsos_txt);
 
@@ -57,6 +62,12 @@ public class Press extends FragmentActivity {
             pAceptar = new Dialog(this);
            // pAerror = new Dialog(this);
 
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPop();
+            }
+        });
       /* registrar.setOnClickListener(new View.OnClickListener() {
            String reg = registro.getText().toString();
            String pul = pulsos.getText().toString();
@@ -77,7 +88,9 @@ public class Press extends FragmentActivity {
     registrar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
             registrarPresion();
+
         }
     });
 
@@ -106,6 +119,8 @@ public class Press extends FragmentActivity {
 
         Toast.makeText(getApplicationContext(),"Id Registro: "+idResultante,Toast.LENGTH_SHORT).show();
         db.close();
+        Intent i = new Intent(this, Principal.class);
+        startActivity(i);
     }
 
     public void showPop(){
@@ -121,17 +136,5 @@ public class Press extends FragmentActivity {
         pAceptar.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         pAceptar.show();
     }
-    public void badShow(){
-        pAerror.setContentView(R.layout.error);
-        bPerror = (Button) pAceptar.findViewById(R.id.btn_error);
 
-        bPerror.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pAerror.dismiss();
-            }
-        });
-        pAerror.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        pAerror.show();
-    }
 }

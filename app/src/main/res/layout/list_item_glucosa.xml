@@ -126,13 +126,23 @@
                     <TextView
                         android:id="@+id/medicionGlucosa_db"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="12"
                         android:textColor="#295AD3"
                         android:textSize="29dp"
                         android:textStyle="bold"
                         android:layout_below="@+id/r12"/>
+                    <TextView
+                        android:id="@+id/molll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="mmol/L"
+                        android:textColor="#295AD3"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/medicionGlucosa_db"/>
                 </RelativeLayout>
 
             </LinearLayout>
